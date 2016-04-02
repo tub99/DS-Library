@@ -5,9 +5,9 @@ Packets.Graph = function()
 		edges = 0,
 		adjMat=[],
 		marked=[];
-	this.initGraph = function(v)
-	{
-		vertices = (v!=undefined && typeof(v)=="number") ? v : 0 ;
+
+	this.initGraph = function(v) {
+		vertices = (v!==undefined && typeof(v)==="number") ? v : 0 ;
 		//initializing the adjacent matrix
 		for(var i=0;i<vertices;i++) {
 			//creating a 2-D matrix for every vertex
@@ -16,7 +16,8 @@ Packets.Graph = function()
 			//adjMat[i].push(" ");
 		}
 	
-	}
+	},
+
 	this.addEdge = function(v1,v2) {
 		// an edge is formed by connecting two vertices
 		if(v1<vertices && v2<vertices) {
@@ -26,7 +27,8 @@ Packets.Graph = function()
 		}
 		else
 			console.log("Edge is invalid, cannot be inserted");
-	}
+	},
+
 	this.deleteEdge = function(v1,v2) {
 		if(Array.isArray(adjMat[v1])){
 			adjMat[v1].pop(v2);
@@ -34,9 +36,8 @@ Packets.Graph = function()
 			edges--;
 
 		}
-		
+	},
 
-	}
 	this.displayGraph = function(){
 		for(var i=0;i<vertices;i++) {
 			document.write(i+" -> ");
@@ -47,7 +48,8 @@ Packets.Graph = function()
 			}
 			document.write("<br>");
 		}
-	}
+	},
+	
 	this.dfs = function(vert) {
 		
 		//marking the vertex as visited
@@ -64,12 +66,11 @@ Packets.Graph = function()
 			if(marked[w] === undefined)
 				this.dfs(w);
 		}
+	},
 
-
-	}
 	this.bfs = function(vert) {
 		document.write("Under Construction");
-	}
+	};
 
 
-}
+};

@@ -29,18 +29,20 @@ Stack = function(capacity) {
 	this.s_empty= function() {
 		if(top==-1)
 			return true;
-		else 
+		else {
 			return false;
+		}
 	},
 	this.s_full= function() {
 		if(top===size-1)
 			return true;
-		else 
+		else {
 			return false;
+		}
 
-	}
+	},
 	this.s_display=function() {
-		for(el in info)
+		for(let el of info)
 			document.write(el+" ");
-	}
-}
+	};
+};

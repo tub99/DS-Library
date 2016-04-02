@@ -9,8 +9,7 @@ SinglyLinkedList=function() {
 	this.addLast=function(item) {
 		var temp=new SNode(item),
 			curr=head;
-		while(curr.next!=null)
-		{
+		while(curr.next!==null){
 			curr=curr.next;
 		}	
 		curr.next=temp;
@@ -19,7 +18,7 @@ SinglyLinkedList=function() {
 	this.addAfter=function(after,item) {
 		var curr=head,
 			temp=new SNode(item);
-		while(curr.next!=null)
+		while(curr.next!==null)
 		{
 			if(curr.data===after)
 				break;
@@ -29,20 +28,20 @@ SinglyLinkedList=function() {
 		curr.next=temp;
 	},
 	this.deleteFirst = function() {
+		var curr;
 		if(!this.isEmptyList()) {
-			var curr=head;
+			curr=head;
 			head=curr.next;
 			delete curr;
 		}
-		else
-		{
+		else {
 			document.write(" Empty List : Nothing to delete");
 		}
 	},
 	this.deleteLast = function() {
 		if(!this.isEmptyList()) {
 			var curr=head;
-			while(curr.next!=null)
+			while(curr.next!==null)
 			{
 				prev=curr;
 				curr=curr.next;
@@ -57,7 +56,7 @@ SinglyLinkedList=function() {
 		if(!this.isEmptyList()) {
 			var curr=head,
 				prev=null;
-			while(curr.next!=null)
+			while(curr.next!==null)
 			{
 				if(curr.data===item)
 					break;
@@ -74,17 +73,17 @@ SinglyLinkedList=function() {
 	},
 	this.isEmptyList = function() {
 
-		if(head == null)
+		if(head === null)
 			return true;
-		else 
-			return false;
+		else { return false;
+		}
 	},
 	this.sll_display=function() {
 		var curr=head;
-		while(curr!=null)
+		while(curr !== null)
 		{
 			document.write(curr.data+" ");
 			curr=curr.next;
 		}
 	}
-}
+};

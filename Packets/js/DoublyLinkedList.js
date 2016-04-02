@@ -10,18 +10,17 @@ DoublyLinkedList = function() {
 	this.addLast=function(item) {
 		var temp=new DNode(item),
 			curr=head;
-		while(curr.right!=null)
+		while(curr.right !== null)
 		{
 			curr=curr.right;
 		}
-		temp.left=curr;	
-		curr.right=temp;
+		temp.left=curr;	curr.right=temp;
 		temp.right=null;
 	},
 	this.addAfter=function(after,item) {
 		var curr=head,
 			temp=new DNode(item);
-		while(curr.right!=null)
+		while(curr.right !==null)
 		{
 			if(curr.data === after)
 				break;
@@ -46,7 +45,7 @@ DoublyLinkedList = function() {
 	this.deleteLast = function() {
 		if(!this.isEmptyList()) {
 			var curr=head;
-			while(curr.right!=null)
+			while(curr.right !== null)
 			{
 				prev=curr;
 				curr=curr.right;
@@ -59,10 +58,12 @@ DoublyLinkedList = function() {
 		
 	},
 	this.deleteNode = function(item) {
+		var curr,
+		prev;
 		if(!this.isEmptyList()) {
-			var curr=head,
-				prev=null;
-			while(curr.right!=null)
+			curr=head;
+			prev=null;
+			while(curr.right !== null)
 			{
 				if(curr.data===item)
 					break;
@@ -71,7 +72,7 @@ DoublyLinkedList = function() {
 				
 			}
 			prev.right=curr.right;
-			curr.right.left=prev
+			curr.right.left=prev;
 			delete curr;
 		}
 		else
@@ -80,17 +81,16 @@ DoublyLinkedList = function() {
 	},
 	this.isEmptyList = function() {
 
-		if(head == null)
+		if(head === null)
 			return true;
-		else 
-			return false;
+		else return false;
 	},
 	this.dll_display=function() {
 		var curr=head;
-		while(curr!=null)
+		while(curr !== null)
 		{
 			document.write(curr.data+" ");
 			curr=curr.right;
 		}
 	}
-}
+};

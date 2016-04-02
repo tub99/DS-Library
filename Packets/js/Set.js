@@ -24,39 +24,45 @@ Packets.Set = function() {
 		},
 		getSetArray = function() {
 			return setArr;
-		}
+		};
+
 	this.addData = function(item) {
 		//element does not exist in the existing Set
 		if(setArr.indexOf(item)<0)
 			setArr.push(item);
-	}
+	},
+
 	this.removeData = function(item) {
 		if(setArr.indexOf(item)>=0) {
 			setArr.splice(1,setArr.indexOf(item));
 			return true;
 		}
 		return false;
-	}
+	},
+
 	this.contains = function(el) {
 		if(setArr.indexOf(el)>=0)
 			return true;
-		else 
+		else {
 			return false;
-	}
+		}
+	},
 
 	this.union = function(set1,set2) {
 		return removeDuplicates(set1.concact(set2));
-	}
+	},
+
 	this.intersect = function(set1,set2) {
 		for(let val of set2) {
 			if(!set1.contains(val))
 				return false;
 		}
 		return true;
-	}
+	},
+
 	this.show = function(set) {
 		var arr=getSetArray();
 		for( let value of arr)
 			document.write(value+"<br>");
 	}
-}
+};
