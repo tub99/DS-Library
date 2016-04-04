@@ -11,6 +11,7 @@ Packets is a DataStructure Library in JavaScript.
   7} BSTree <br/>
   8} Graph <br/>
   9}Set <br/>
-  10}Dictionary-yet to come! <br/>
-  11}HashTable-yet to come! <br/>
-  12}Circular Linked List-yet to come! <br/>
+  10}Dictionary-Coming soon! <br/>
+  11}HashTable-Coming soon! <br/>
+  12}Circular Linked List-Coming soon! <br/>
+  13}Priority Queue - Coming soon! </br>
