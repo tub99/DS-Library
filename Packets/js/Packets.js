@@ -1,11 +1,27 @@
 //This is library to handle dataStructures like 
-// Stack, Queue, CircularQueue, LinkedList,Tree
+/*
+1.Stack
+2.Queue
+3. Circular Queue
+4. Singly Linked List
+5. Doubly Linked List
+6.Tree
+7. BSTree
+8. Graph
+9.Set
+10.Dictionary-yet to come!
+11.HashTable-yet to come!
+12.Circular Linked List-yet to come!
+*/
 
 
-//Pakets namespace
+//creating the Pakets namespace
 var Packets;
+// if Packets doesn't exist craete a Packets namespace
 if(Packets === undefined || typeOf(Packets)!=Object)
 	Packets={};
+// packets Class method to be implemented soon
+/*
 Packets.prototype={
 
 	p_equals: function() {
@@ -26,4 +42,5 @@ Packets.prototype={
 	p_delete: function() {
 
 	}
+*/
 }
