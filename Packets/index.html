@@ -15,8 +15,11 @@
 	<body>
 		<script type="text/javascript">
 			var set = new Packets.Set();
-			set.addData(3);set.addData(2);set.addData(3);set.addData(10);set.addData(1);set.addData(2);
-			set.show(set);
+			set.addData(3);set.addData(2);set.addData(3);
+			var set2 = new Packets.Set();
+			set2.addData(10);set2.addData(1);set2.addData(2);
+			var intersectedSet=set.intersect(set2);
+			unionedSet.show();
 		</script>
 		
 	</body>

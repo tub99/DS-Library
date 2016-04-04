@@ -123,6 +123,7 @@ Packets.BSTree = function() {
   };
   //Checking whether a tree is empty or not
   this.isEmpty = function() {
+    // root=null means there is nothing in the tree
     if(root === null) {
       return true;
     }

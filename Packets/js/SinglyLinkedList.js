@@ -9,6 +9,7 @@ SinglyLinkedList=function() {
 	// Adding an elemnt to the beginning of the list
 	this.addFirst=function(item) {
 		// temp is the temporary node which will be added
+		// Snode craetes a node of the above structure
 		var temp=new SNode(item);
 		//temp->next should point to where the head was poiniting
 		temp.next=head;
@@ -39,11 +40,14 @@ SinglyLinkedList=function() {
 		var curr=head,
 		// temp is the temporary node which will be added
 			temp=new SNode(item);
-			// Searching for the node after which we want to insert
+		// Searching for the node after which we want to insert
 		while(curr.next!==null)
 		{
+			// When we find the node we were 
+			// searching we break out of the loop
 			if(curr.data===after)
 				break;
+			//moving to the next node
 			curr=curr.next;
 		}
 		// temp-> next will now be pointing to where curr-> next was pointing
@@ -59,8 +63,9 @@ SinglyLinkedList=function() {
 		// ie there is something to delete
 		if(!this.isEmptyList()) {
 
-			//head will now point to 
+			//head will now point to curr->next
 			head=curr.next;
+			// deleting the curr node
 			delete curr;
 		}
 		else {
@@ -75,14 +80,15 @@ SinglyLinkedList=function() {
 			//prev is the node before the current
 				prev=null;
 			//Searching for the last node
-			//In case of the last one its net points to null
+			//In case of the last one its next points to null
 			while(curr.next!==null)
 			{
 				prev=curr;
 				curr=curr.next;
 			}
-			// prev is the node before the last one 
+			// prev is the last node now 
 			prev.next=null;
+			// deleting the curr node
 			delete curr;
 		}	
 		else
@@ -108,6 +114,7 @@ SinglyLinkedList=function() {
 			}
 			// upadting the pointers and making adjustments
 			prev.next=curr.next;
+			// deleting the curr node
 			delete curr;
 		}
 		else
@@ -124,8 +131,9 @@ SinglyLinkedList=function() {
 		}
 	};
 	// displays elemnts of the singly linked list
-	this.sll_display=function() {
+	this.display=function() {
 		var curr=head;
+		// while we reach the last elemnt
 		while(curr !== null)
 		{
 			document.write(curr.data+" ");
