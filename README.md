@@ -17,7 +17,24 @@ Packets is a DataStructure Library in JavaScript.
   13}Priority Queue - Coming soon! </br>
 
 ### How to create a DataStructure of your choice
-Example : Creating a Set DataStructure
+Example1: Creating a Stack DataStructure
+```javascript
+  //Creating a Stack
+  //Packets.Stack(size of stack)
+  var stack = new Packets.Stack(5);
+  //pushing data to stack
+  stack.s_push(2);stack.s_push(4);stack.s_push(3);
+  stack.s_push(49);stack.s_push(11);stack.s_push(6);
+  //asking for the topmost data on Stack
+  stack.s_peek(); 
+  //removing topmost data from stack
+  stack.s_pop();
+  //displaying entire stack
+  stack.s_display();
+
+```
+
+Example2 : Creating a Set DataStructure
 ```javascript
   // To run a Set DataStructure first create an instance 
   // of the Packets.Set class
@@ -39,4 +56,5 @@ Example : Creating a Set DataStructure
   	intersectedSet.show();
 
 ```
-
+##Note:
+document.write() is used only for display purpose.
