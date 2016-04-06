@@ -37,9 +37,10 @@
 			document.write("<br> <br><br> Creating Queue<br>")
 			var queue =new Packets.CircularQueue(5);
 			queue.cq_insert(66);queue.cq_insert(21);queue.cq_insert(17);
-			queue.cq_insert(39);queue.cq_insert(4);
+			queue.cq_insert(39);queue.cq_insert(4);queue.cq_insert(17);
+			queue.cq_insert(17);queue.cq_insert(66);queue.cq_insert(21);
 			queue.cq_delete();
-			//queue.cq_display();
+			queue.cq_display();
 
 
 		 	//Creating a set 
