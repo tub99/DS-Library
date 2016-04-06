@@ -12,7 +12,7 @@ Packets.CircularQueue=function(capacity){
 	// this inserts an element inside the queue	
 	this.cq_insert = function(item) {
 		// Insertion can happen only if the queue is not full
-		if(!this.q_full()) {
+		if(!this.cq_full()) {
 			//adding items to rear
 			info[rear]=item;
 			//updating rear value
@@ -20,24 +20,27 @@ Packets.CircularQueue=function(capacity){
 			// during insertion flag is true
 			//flag helps us to dtecet whether the CQ is empty or full
 			flag=true;
+			document.write(item+ " successfully inserted into the circular queue !<br>");
 		}
 		else
-			document.write("Circular Queue full");
+			document.write("Circular Queue full!Cannot insert more data.<br>");
 	};
 	// deletes an element from the Cqueue
 	this.cq_delete = function() {
 		// If there are items to delete
-		if(!this.q_empty()) {
+		if(!this.cq_empty()) {
 			//delete from front
-			var el=this.info[front];
+			var el=info[front];
+			document.write("Deleted item is"+el+"<br>");
 			//update front
 			front=front+1%size;
 			// during deletion flag is true
 			//flag helps us to dtecet whether the CQ is empty or full
 			flag=false;
+
 		}
 		else
-			document.write("Circular Queue empty");
+			document.write("Circular Queue empty! Cannot delete any more data. <br>");
 		
 	};
 	// returns size of circularQueue
@@ -66,11 +69,18 @@ Packets.CircularQueue=function(capacity){
 
 	};
 	// display cq elements
-	this.cq_display=function() {
-		if(!this.cq_empty())
-			for(var i=0;i<info.length;i++) {
-				document.write(info[i]+" ");
-			}
-	};
+	// this.cq_display=function() {
+	// 	var f=front,
+	// 		r=rear;
+	// 	document.write("*********Displaying Circular Queue*********** <br>");
+	// 	if(!this.cq_empty()){
+	// 		while(front !== rear || flag===true) {
+	// 			document.write("At position "+front+" of the queue is "+info[front]+" <br>");
+	// 			front=(front+1)%size;
+	// 			flag=false;
+
+	// 		}
+	// 	}
+	// };
 
 };

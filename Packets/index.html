@@ -10,6 +10,7 @@
 		<script type="text/javascript" src="js/BSTree.js"></script>
 		<script type="text/javascript" src="js/Graph.js"></script>
 		<script type="text/javascript" src="js/Set.js"></script>
+		<script type="text/javascript" src="js/CircularQueue.js"></script>
 
 	</head>
 	<center>
@@ -34,13 +35,11 @@
 
 			//Creating a Queue
 			document.write("<br> <br><br> Creating Queue<br>")
-			var queue =new Packets.Queue(5);
-			queue.q_insert(66);queue.q_insert(21);queue.q_insert(17);
-			queue.q_insert(39);queue.q_insert(4);
-
-			queue.q_delete();
-
-			queue.q_display();
+			var queue =new Packets.CircularQueue(5);
+			queue.cq_insert(66);queue.cq_insert(21);queue.cq_insert(17);
+			queue.cq_insert(39);queue.cq_insert(4);
+			queue.cq_delete();
+			//queue.cq_display();
 
 
 		 	//Creating a set 
