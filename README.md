@@ -39,3 +39,5 @@ Example : Creating a Set DataStructure
   	intersectedSet.show();
 
 ```
+#Note:
+document.write() has been used just for displaying purpose !
