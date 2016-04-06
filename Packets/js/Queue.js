@@ -57,7 +57,7 @@ Packets.Queue=function(capacity){
 	this.q_display=function() {
 		if(!this.q_empty())
 			for(var i=0;i<info.length;i++) {
-				document.write(info[i]+" ");
+				console.log(info[i]+" ");
 			}
 	};
 

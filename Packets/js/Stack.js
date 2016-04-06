@@ -72,6 +72,6 @@ Packets.Stack = function(capacity) {
 	// this function diplays the element of the stack
 	this.s_display=function() {
 		for(let el of info)
-			document.write(el+" ");
+			console.log(el+" ");
 	};
 };

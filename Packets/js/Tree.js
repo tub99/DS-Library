@@ -19,6 +19,6 @@
 	// This is used to display the entire tree from left to right
 	this.displayTree = function() {
     for(var i=0;i<treeArr.length;i++)
-      document.write(treeArr[i]+" -- ");
+      console.log(treeArr[i]+" -- ");
   };
 };

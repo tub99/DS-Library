@@ -69,7 +69,7 @@ Packets.CircularQueue=function(capacity){
 	this.cq_display=function() {
 		if(!this.cq_empty())
 			for(var i=0;i<info.length;i++) {
-				document.write(info[i]+" ");
+				console.log(info[i]+" ");
 			}
 	};
 

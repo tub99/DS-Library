@@ -72,7 +72,7 @@ Packets.BSTree = function() {
       //Then traverse Right subTree
       this.postorder(ptr.right);
       //Then traverse root
-      document.write(" "+ptr.data+" ");
+      console.log(" "+ptr.data+" ");
    }
     return;
   };
@@ -81,7 +81,7 @@ Packets.BSTree = function() {
 		//var ptr=root;
     //First root
     if(ptr!== null) {
-      document.write(" "+ptr.data+"<br> ");
+      console.log(" "+ptr.data+"<br> ");
       //Then Left-subtree
       this.preorder(ptr.left);
       //Lastly rt SubTree
@@ -95,7 +95,7 @@ Packets.BSTree = function() {
 		//var ptr=root;
     if(ptr!== null) {
       this.inorder(ptr.left);
-      document.write("-"+ptr.data+"-");
+      console.log("-"+ptr.data+"-");
       this.inorder(ptr.right);
     }
     return;
@@ -113,7 +113,7 @@ Packets.BSTree = function() {
     if(rt === null)
       return;
     if(level === 1)
-      document.write(rt.data+" ");
+      console.log(rt.data+" ");
     else if(level > 1)
     {
       // Recursive calls to rt sub-tree and then to left-subtree

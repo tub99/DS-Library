@@ -69,7 +69,7 @@ SinglyLinkedList=function() {
 			delete curr;
 		}
 		else {
-			document.write(" Empty List : Nothing to delete");
+			console.log(" Empty List : Nothing to delete");
 		}
 	};
 	// This function deletes the last element of The list
@@ -92,7 +92,7 @@ SinglyLinkedList=function() {
 			delete curr;
 		}	
 		else
-			document.write(" Empty List ! Nothing to delete");
+			console.log(" Empty List ! Nothing to delete");
 		
 	};
 	// delete a particular node of the list
@@ -118,7 +118,7 @@ SinglyLinkedList=function() {
 			delete curr;
 		}
 		else
-			document.write(" Empty List ! Nothing to delete");
+			console.log(" Empty List ! Nothing to delete");
 
 	};
 	// check if list is empty or not
@@ -136,7 +136,7 @@ SinglyLinkedList=function() {
 		// while we reach the last elemnt
 		while(curr !== null)
 		{
-			document.write(curr.data+" ");
+			console.log(curr.data+" ");
 			curr=curr.next;
 		}
 	}

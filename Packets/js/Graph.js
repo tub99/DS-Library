@@ -60,13 +60,13 @@ Packets.Graph = function()
 	// this function displays the elements of the graph
 	this.displayGraph = function(){
 		for(var i=0;i<vertices;i++) {
-			document.write(i+" -> ");
+			console.log(i+" -> ");
 			for(var j=0; j< vertices; j++){
 				// displaying elements
 				if(adjMat[i][j]!== undefined)
-					document.write(adjMat[i][j]+ ' | ');
+					console.log(adjMat[i][j]+ ' | ');
 			}
-			document.write("<br>");
+			console.log("<br>");
 		}
 	};
 
@@ -78,8 +78,8 @@ Packets.Graph = function()
 		marked[vert]=true;
 		//checking whether the vertex 'vert' is valid 
 		if(adjMat[vert] !== undefined) {
-			document.write("Marked vertex:"+vert);
-			document.write("<br>");
+			console.log("Marked vertex:"+vert);
+			console.log("<br>");
 		}
 		//recursively call dfs on the remaining vertices which is adjacent to 'vert'
 		// Loop though all the adjacent vertices and call dfs on them
@@ -93,7 +93,7 @@ Packets.Graph = function()
 	// This function takes the source vertex
 	// and traverse the graph level-wise from the source
 	this.bfs = function(vert) {
-		document.write("Under Construction. Comingup Shortly!");
+		console.log("Under Construction. Comingup Shortly!");
 	};
 
 
