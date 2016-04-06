@@ -18,79 +18,71 @@ Packets.Set = function() {
 		};
 	// This function converts the set into array 
 	// and returns it
-	this.ToArray = function() {
+		this.ToArray = function() {
 			return setArr;
-		};
+		}
 	// This function takes 'item' and inserts it into the set
-	this.addData = function(item) {
+		this.addData = function(item) {
 		//element does not exist in the existing Set
-		// as Set doen't allow duplicate elements
 		if(setArr.indexOf(item)<0)
 			setArr.push(item);
-	};
+	}
 	// This removes the item the user wants to
 	// be deleted from the Set
-	this.removeData = function(item) {
-		// checking if element exists in the set
-		// if it exists remove data and return true else false
+		this.removeData = function(item) {
 		if(setArr.indexOf(item)>=0) {
-			//removing item from set
-			setArr.splice(1,setArr.indexOf(item));
+			setArr.splice(setArr.indexOf(item),1);
 			return true;
 		}
 		return false;
-	};
+	}
 	// // checking if 'item' exists in the set or not
-	this.contains = function(el) {
+		this.contains = function(el) {
 		if(setArr.indexOf(el)>=0)
 			return true;
-		else {
+		else 
 			return false;
-		}
-	};
+	}
 	//the union (denoted by ∪) of a collection of sets is the set of all
 	// distinct elements in the collection set1 and set2
-	this.union = function(s2) {
-		// temp is the new union Set
+		this.union = function(s2) {
 		var temp = new Packets.Set(),
 			s1Arr=this.ToArray();
 			temp=s2;
 		for(let val of s1Arr){
-			// It will never add duplicate data
 				temp.addData(val);
 		}
 		return temp;
 
-	};
+	}
 	// the intersection set1 ∩ set2 of two sets set1 and set2 is the set
 	// that contains all elements of set1 that also belong to set2 
 	//(or equivalently, all elements of set2 that also belong to set1),
 	// but no other elements.
-	this.intersect = function(s2) {
-		// temp is the new intersected Set
+		this.intersect = function(s2) {
 		var temp = new Packets.Set(),
-			s1Arr=this.ToArray();		
+			s1Arr=this.ToArray();
+			
 		for(let val of s1Arr){
-			// If el in set1 is there in sett2
-			// then include those elements only
 			if(s2.contains(val))
 				temp.addData(val);
 		}
 		return temp;
-	};
+	}
 	// This function displays the element in the set
-	this.show = function() {
-		// converting to array and displaying individual elements
-		// of an array
+		this.show = function() {
+		document.write("**********Displaying Set********<br>");
+
 		var arr=this.ToArray();
 		for( let value of arr)
 			document.write(value+"<br>");
-	};
+	}
 	// checking whether a set is empty or not
-	this.ifEmpty = function() {
+		this.ifEmpty = function() {
 		var arr = this.ToArray();
 		if(arr.length === 0)
 			return true;
-		else return false;
-	};
+		else 
+			return false;
+	}
 };
