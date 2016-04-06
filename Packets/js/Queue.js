@@ -4,7 +4,7 @@
 // user should give the capacity of the queue
 Packets.Queue=function(capacity){
 	//insertion takes place from rear,deletion from front
-	var  front=-1,
+	var  front=0,
 		rear=-1,
 		size=capacity || 5,
 		info=[];
@@ -15,18 +15,22 @@ Packets.Queue=function(capacity){
 			// we add items to the Rear part
 			++rear;
 			info[rear]=item;
+			document.write(item+ " successfully inserted into the queue !<br>");
 		}
 		else
-			console.log("Queue full");
+			document.write("Queue full!Cannot insert more data.<br>");
 	};
 	// deletes an element from the queue
 	this.q_delete = function() {
 		// If there are items to delete
 		//delete from front
-		if(!this.q_empty())
-			return this.info[front++];
+		if(!this.q_empty()){
+			
+			document.write("Deleted item is"+info[front]+"<br>");
+			front++;
+		}
 		else
-			console.log("Queue empty");
+			document.write("Queue empty! Cannot delete any more data. <br>");
 		
 	};
 	// returns size of the queue
@@ -55,9 +59,10 @@ Packets.Queue=function(capacity){
 	};
 	// dispalying elemments of the queue
 	this.q_display=function() {
+		document.write("*********Displaying Queue*********** <br>");
 		if(!this.q_empty())
-			for(var i=0;i<info.length;i++) {
-				console.log(info[i]+" ");
+			for(var i=front;i<=rear;i++) {
+				document.write("At position "+i+" of the queue is "+info[i]+" <br>");
 			}
 	};
 

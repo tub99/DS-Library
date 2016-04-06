@@ -22,7 +22,7 @@ Packets.CircularQueue=function(capacity){
 			flag=true;
 		}
 		else
-			console.log("Circular Queue full");
+			document.write("Circular Queue full");
 	};
 	// deletes an element from the Cqueue
 	this.cq_delete = function() {
@@ -37,7 +37,7 @@ Packets.CircularQueue=function(capacity){
 			flag=false;
 		}
 		else
-			console.log("Circular Queue empty");
+			document.write("Circular Queue empty");
 		
 	};
 	// returns size of circularQueue
@@ -69,7 +69,7 @@ Packets.CircularQueue=function(capacity){
 	this.cq_display=function() {
 		if(!this.cq_empty())
 			for(var i=0;i<info.length;i++) {
-				console.log(info[i]+" ");
+				document.write(info[i]+" ");
 			}
 	};
 

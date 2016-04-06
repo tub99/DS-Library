@@ -84,7 +84,7 @@ Packets.Set = function() {
 		// of an array
 		var arr=this.ToArray();
 		for( let value of arr)
-			console.log(value+"<br>");
+			document.write(value+"<br>");
 	};
 	// checking whether a set is empty or not
 	this.ifEmpty = function() {

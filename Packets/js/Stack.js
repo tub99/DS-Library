@@ -26,23 +26,24 @@ Packets.Stack = function(capacity) {
 			++top;
 			// placing the item in the array
 			info[top]=item;
+			document.write(item+ " successfully inserted into the stack !<br>");
 		}
 		else
-			console.log("stack overflow");
+			document.write("stack overflow! Cannot insert "+item+" <br>");
 	};
 	// This function deletes the element on top of the Stack
 	this.s_pop = function() {
 		// if there are items in the stack
 		if(!this.s_empty())
-			return this.info[top--];// delete the topmost item
+			return info[top--];// delete the topmost item
 		else
-			console.log("stack underflow");
+			document.write("stack underflow <br>");
 		
 	};
 	// This function returns the elemnt which is
 	// present on top of the Stack
 	this.s_peek = function() {
-		return info[top];
+		document.write("Peeked data is"+info[top]+"<br>");
 	};
 	// This returns the size of the stack
 	this.s_size = function() {
@@ -71,7 +72,12 @@ Packets.Stack = function(capacity) {
 	};
 	// this function diplays the element of the stack
 	this.s_display=function() {
-		for(let el of info)
-			console.log(el+" ");
+		document.write("*********Displaying Stack*********** <br>");
+		var j=top;
+		while(j>=0){
+
+			document.write("At position "+j+" of the stack is "+info[j]+" <br>");
+			j--;
+		}
 	};
 };

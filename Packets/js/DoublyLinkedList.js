@@ -77,7 +77,7 @@ DoublyLinkedList = function() {
 		}
 		else
 		{
-			console.log(" Empty List : Nothing to delete");
+			document.write(" Empty List : Nothing to delete");
 		}
 	};
 	// This function deletes the last element of The list
@@ -101,7 +101,7 @@ DoublyLinkedList = function() {
 			delete curr;
 		}	
 		else
-			console.log(" Empty List ! Nothing to delete");
+			document.write(" Empty List ! Nothing to delete");
 		
 	};
 	// delete a particular node of the list
@@ -134,7 +134,7 @@ DoublyLinkedList = function() {
 			delete curr;
 		}
 		else
-			console.log(" Empty List ! Nothing to delete");
+			document.write(" Empty List ! Nothing to delete");
 
 	};
 	// check if list is empty or not
@@ -151,7 +151,7 @@ DoublyLinkedList = function() {
 		// while we reach the last elemnt
 		while(curr !== null)
 		{
-			console.log(curr.data+" ");
+			document.write(curr.data+" ");
 			curr=curr.right;
 		}
 	}

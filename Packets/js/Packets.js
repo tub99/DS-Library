@@ -42,5 +42,5 @@ Packets.prototype={
 	p_delete: function() {
 
 	}
-*/
 }
+*/
