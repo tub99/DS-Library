@@ -56,5 +56,6 @@ Example2 : Creating a Set DataStructure
   	intersectedSet.show();
 
 ```
+Check out the output at http://tub99.github.io/Packets/index.html<br>
 ##Note:
 document.write() is used only for display purpose.
